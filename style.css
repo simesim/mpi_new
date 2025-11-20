@@ -472,7 +472,6 @@ body {
 
 /* Контейнер свайпера */
 .features-swiper {
-    width: 1200px !important;
     height: 227px;
     overflow: hidden;
 }
@@ -807,4 +806,71 @@ body {
     border-radius: 8px;
     margin: 0 auto;
     text-decoration: none;
+}
+
+
+/* КЛИЕНТЫ */
+.clients-block {
+    width: 100%;
+    background: #142E43;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+.clients-title {
+    font-family: Proxima, sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    color: #fff;
+
+    margin-left: 10px;
+    margin-bottom: 35px;
+}
+
+/* Маркировочная лента */
+.marquee {
+    width: 100%;
+    height: 226px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.marquee-inner {
+    display: flex;
+    width: max-content;
+}
+
+.marquee-group {
+    display: flex;
+    gap: 12px;
+}
+
+.client-card {
+    width: 355px;
+    height: 147px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+
+    object-fit: contain;
+}
+
+/* Анимации */
+.marquee-left .marquee-inner {
+    animation: marquee-left 40s linear infinite;
+}
+
+.marquee-right .marquee-inner {
+    animation: marquee-right 40s linear infinite;
+}
+
+@keyframes marquee-left {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
 }

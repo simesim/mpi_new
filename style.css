@@ -1,0 +1,622 @@
+/* ====== БАЗА ====== */
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter-Light.woff2") format("woff2"),
+        url("fonts/Inter-Light.woff") format("woff");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter-Medium.woff2") format("woff2"),
+        url("fonts/Inter-Medium.woff") format("woff");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter-Regular.woff2") format("woff2"),
+        url("fonts/Inter-Regular.woff") format("woff");
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+/* Базовый контейнер */
+.container {
+    width: 1200px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/* Хедер */
+.header {
+    background-color: #142E43;
+    height: 160px;
+    padding-top: 10px;
+}
+
+/* ЛОГО */
+.logo-img {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    width: 144px;
+    height: 97px;
+}
+
+/* Подпись у логотипа */
+.logo-desc {
+    position: absolute;
+    left: 180px;
+    top: 26px;
+    width: 199px;
+    height: 68px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+}
+
+/* Решения */
+.nav-solutions {
+    position: absolute;
+    left: 523px;
+    top: 43px;
+    width: 108px;
+    height: 24px;
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/*  О компании */
+.nav-about {
+    position: absolute;
+    left: 715px;
+    top: 43px;
+    width: 134px;
+    height: 24px;
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* Кнопка */
+.btn-call {
+    position: absolute;
+    left: 933px;
+    top: 28px;
+    width: 217px;
+    height: 55px;
+    background-color: #FF7A3A;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 55px;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* Email */
+.header-email {
+    position: absolute;
+    left: 980px;
+    top: 95px;
+    width: 167px;
+    height: 22px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+/* Телефон */
+.header-phone {
+    position: absolute;
+    left: 989px;
+    top: 123px;
+    width: 158px;
+    height: 22px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+/* ПЕРВЫЙ БЛОК */
+/* Сам блок */
+.first-screen {
+    position: relative;
+    height: 540px;
+    background-color: #142E43;
+}
+
+/* Заголовок */
+.fs-title {
+    position: absolute;
+    left: 10px;
+    top: 61px;
+    width: 611px;
+    height: 180px;
+    margin: 0;
+    color: #FFFFFF;
+    font-family: Proxima, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+/* Текст */
+.fs-text {
+    position: absolute;
+    left: 10px;
+    top: 271px;
+    width: 549px;
+    height: 48px;
+    margin: 0;
+    color: #FFFFFF;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+/* Кнопка */
+.fs-btn {
+    position: absolute;
+    left: 10px;
+    top: 349px;
+    width: 300px;
+    height: 50px;
+    background-color: #FF7A3A;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* Картинка */
+.fs-image {
+    position: absolute;
+    left: 603px;
+    top: -90px;
+    width: 847px;
+    height: 674px;
+    transition: transform 0.25s ease-out;
+    pointer-events: none;
+}
+
+/* Блок с цифрами */
+
+.numbers-block {
+    position: relative;
+    height: 240px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+
+/* 3 колонка */
+
+.n1-title {
+    position: absolute;
+    left: 71px;
+    top: 40px;
+    width: 150px;
+    height: 60px;
+    color: #FF7A3A;
+    font-family: Inter, sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.n1-text {
+    position: absolute;
+    left: 40px;
+    top: 108px;
+    width: 216px;
+    height: 72px;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+
+/* 2 колонгка */
+
+.n2-title {
+    position: absolute;
+    left: 491px;
+    top: 40px;
+    width: 178px;
+    height: 60px;
+    color: #FF7A3A;
+    font-family: Inter, sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.n2-text {
+    position: absolute;
+    left: 451px;
+    top: 108px;
+    width: 257px;
+    height: 72px;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+
+/* 3 колонка */
+
+.n3-title {
+    position: absolute;
+    left: 982px;
+    top: 40px;
+    width: 100px;
+    height: 60px;
+    color: #FF7A3A;
+    font-family: Inter, sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.n3-text {
+    position: absolute;
+    left: 903px;
+    top: 108px;
+    width: 257px;
+    height: 72px;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+/* Акции, меропрития и новсти  */
+
+.news-block {
+    position: relative;
+    height: 389px;
+}
+
+/* Кнопки */
+.tab {
+    position: absolute;
+    width: 220px;
+    height: 44px;
+    border-radius: 15px;
+    background: transparent;
+    border: 2px solid #4D96BF;
+    color: #000000;
+    font-size: 20px;
+    font-family: Inter;
+    text-align: center;
+    line-height: 44px;
+}
+
+.tab-active {
+    background: #4D96BF;
+    color: #FFFFFF;
+}
+
+/* Позиции кнопок */
+#tab-news {
+    left: 25px;
+    top: 56px;
+}
+
+#tab-sales {
+    left: 490px;
+    top: 56px;
+}
+
+#tab-events {
+    left: 955px;
+    top: 56px;
+}
+
+/* Текстовые элементы */
+.date {
+    position: absolute;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 200;
+    /* ExtraLight */
+    color: #000000;
+}
+
+.text {
+    position: absolute;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 300;
+    /* Light */
+    color: #000000;
+    line-height: 1.2;
+}
+
+/* Позиции дат */
+.col1-date {
+    left: 27px;
+    top: 132px;
+}
+
+.col2-date {
+    left: 427px;
+    top: 132px;
+}
+
+.col3-date {
+    left: 898px;
+    top: 132px;
+}
+
+/* Позиции текстов */
+.col1-text {
+    left: 27px;
+    top: 171px;
+    width: 316px;
+}
+
+.col2-text {
+    left: 427px;
+    top: 159px;
+    width: 400px;
+}
+
+.col3-text {
+    left: 898px;
+    top: 171px;
+    width: 292px;
+}
+
+/* Кнопка "Смотреть все" */
+.btn-more {
+    position: absolute;
+    left: 492px;
+    top: 274px;
+    width: 216px;
+    height: 55px;
+    background: #FF7A3A;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-family: Inter;
+    text-decoration: none;
+}
+
+/* О НАС*/
+.about-container {
+    position: relative;
+    height: 330px;
+    background: #142E43;
+}
+
+.about-section {
+    width: 100%;
+    background: #142E43;
+    height: 330px;
+}
+
+/* Заголовок */
+.about-title {
+    position: absolute;
+    left: 10px;
+    top: 40px;
+
+    height: 54px;
+
+    color: #FFFFFF;
+    font-size: 45px;
+    font-family: Proxima, sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* текст */
+.about-text {
+    position: absolute;
+    left: 10px;
+    top: 114px;
+
+    width: 662px;
+
+    color: #FFFFFF;
+    font-size: 20px;
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Картинка справа */
+.about-img {
+    position: absolute;
+    left: 703px;
+    top: -66px;
+
+    width: 517px;
+    height: 466px;
+}
+
+
+.features {
+    width: 100%;
+    height: 227px;
+    background: #142E43;
+}
+
+/* Контейнер свайпера */
+.features-swiper {
+    width: 1200px !important;
+    height: 227px;
+    overflow: hidden;
+}
+
+/* Чтобы Swiper рисовал горизонтальную линию */
+.features-swiper .swiper-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+/* Слайды */
+.features-swiper .swiper-slide {
+    width: 355px !important;
+    height: 147px !important;
+    flex-shrink: 0 !important;
+}
+
+/* Карточка */
+.feature-card {
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.help {
+    width: 100%;
+    height: 367px;
+    background: #FFFFFF;
+    position: relative;
+}
+
+.help-container {
+    width: 1200px;
+    height: 367px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Левая часть */
+.help-left {
+    position: absolute;
+    left: 14px;
+    top: 70px;
+    width: 617px;
+}
+
+.help-title {
+    font-family: Inter, sans-serif;
+    font-size: 35px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin: 0;
+    color: #000;
+}
+
+.help-subtext {
+    margin-top: 25px;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    width: 430px;
+    line-height: 1.2;
+    color: #000;
+
+}
+
+/* Форма */
+.help-form {
+    position: absolute;
+    left: 759px;
+    top: 40px;
+    width: 431px;
+    height: 288px;
+}
+
+.help-label {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #000;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.help-input {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+
+    border: 1px solid #142E43;
+    border-radius: 15px;
+
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* Чекбокс */
+.help-checkbox {
+    display: flex;
+    align-items: center;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.help-checkbox input {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    accent-color: #142E43;
+}
+
+/* Кнопка */
+.help-btn {
+    width: 260px;
+    height: 60px;
+    background: #FF7A3A;
+    border-radius: 10px;
+    border: none;
+
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
+
+/* Картинка справа */
+.help-img {
+    position: absolute;
+    left: 1020px;
+    top: -69px;
+    width: 463px;
+    height: 417px;
+
+    z-index: 0;    
+    filter: blur(4px); 
+    opacity: 0.7; 
+}
+

@@ -1,22 +1,29 @@
 @font-face {
+    font-family: 'Proxima Nova';
+    src: url('fonts/proxima-nova.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: "Inter";
-    src: url("fonts/Inter-Light.woff2") format("woff2"),
-        url("fonts/Inter-Light.woff") format("woff");
+    src: url('onts/Inter-Light.otf') format('opentype');
     font-weight: 300;
 }
 
 @font-face {
     font-family: "Inter";
-    src: url("fonts/Inter-Medium.woff2") format("woff2"),
-        url("fonts/Inter-Medium.woff") format("woff");
+    src: url('fonts/Inter-Medium.otf') format('opentype');
     font-weight: 500;
-}
-
-@font-face {
-    font-family: "Inter";
-    src: url("fonts/Inter-Regular.woff2") format("woff2"),
-        url("fonts/Inter-Regular.woff") format("woff");
-    font-weight: 400;
 }
 
 body {
@@ -899,11 +906,6 @@ html {
     position: relative;
 }
 
-.container {
-    width: 1200px;
-    margin: 0 auto;
-    position: relative;
-}
 
 /* Заголовок */
 .eff-title {
@@ -985,21 +987,255 @@ html {
 
 .tri-left {
     position: absolute;
-    left: -420px; 
+    left: -420px;
     top: -30px;
     width: 463px;
     height: 417px;
     filter: blur(4px);
-    pointer-events: none; 
+    pointer-events: none;
 }
 
 /* Правый треугольник */
 .tri-right {
     position: absolute;
-    left: calc(1200px + 100px); 
+    left: calc(1200px + 100px);
     top: 7px;
     width: 463px;
     height: 417px;
     filter: blur(4px);
     pointer-events: none;
+}
+
+
+/* КОНТАКТЫ */
+.contacts-block {
+    width: 100%;
+    height: 530px;
+    background: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.contacts-left {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+}
+
+.contacts-title {
+    font-family: Proxima, sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.city-block {
+    margin-bottom: 25px;
+}
+
+.city-title {
+    font-family: Inter, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.city-address {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 4px;
+}
+
+.contact-email,
+.contact-phone {
+    font-family: Inter, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.contact-email {
+    margin-top: 25px;
+}
+
+.contacts-right {
+    position: absolute;
+    top: 40px;
+    left: 780px;
+}
+
+.support-title {
+    font-family: Proxima, sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.support-mail {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #000;
+    text-decoration: none;
+}
+
+.support-item {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.support-item.second {
+    margin-top: 14px;
+}
+
+.tg-icon {
+    width: 29px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.tg-text {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Официальный канал */
+.official-title {
+    margin-top: 40px;
+    font-family: Inter, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.channels {
+    display: flex;
+    gap: 11px;
+    margin-top: 15px;
+}
+
+.channel-icon {
+    width: 33px;
+    height: 33px;
+}
+
+/* Кнопка */
+.contact-btn {
+    display: block;
+    width: 217px;
+    height: 55px;
+    background: #FF7A3A;
+    border-radius: 15px;
+
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    line-height: 55px;
+
+    text-decoration: none;
+    margin-top: 45px;
+}
+
+/* Картинка справа */
+.support-illustration {
+    position: absolute;
+    width: 517px;
+    height: 466px;
+
+    left: 833px;
+    top: 134px;
+
+    object-fit: contain;
+    pointer-events: none;
+}
+
+
+.footer-block {
+    width: 100%;
+    height: 390px;      /* как ты указала */
+    padding-top: 20px;
+}
+
+.footer-container {
+    width: 1200px;      /* стандартный контейнер Тильды */
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 120px;         /* расстояния между столбцами как в макете */
+}
+
+/* Колонки */
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Лого */
+.footer-logo {
+    width: 136px;   
+    height: 91px;
+    margin-bottom: 20px;
+}
+
+/* © 2025 */
+.footer-copy {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+/* Заголовки столбцов */
+.footer-title {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+/* Ссылки */
+.footer-link {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 10px;  /* расстояние точно 10px */
+    text-decoration: none;
+    color: #000;
+}
+.footer-link:hover {
+    opacity: 0.7;
+}
+
+
+.footer-legal {
+    width: 100%;
+    height: 120px;
+    background-color: #1e1e3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-legal-container {
+    text-align: center;
+    color: #ffffff;
+    font-family: Inter, sans-serif;
+}
+
+.footer-legal-year {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.footer-legal-text {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 400;
 }

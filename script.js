@@ -116,15 +116,15 @@ tabEvents.addEventListener("click", () => setActiveTab("events"));
 setActiveTab("news");
 
 /* Свайпер */
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     new Swiper(".features-swiper", {
         slidesPerView: "auto",
-        spaceBetween: 50,
-        freeMode: false,
-        loop: false,
-        grabCursor: true
+        spaceBetween: 31,
+        loop: true,
+        speed: 600,
     });
 });
+
 /* Партнеры переключатели */
 const MPIpartners = {
     g1: [

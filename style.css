@@ -620,19 +620,16 @@ body {
     opacity: 0.7;
 }
 
-/* Внешний блок */
-/* .partners-block {
-    width: 100%;
-    padding-top: 60px;
-} */
+/* ПАРТНЕРЫ */
 
 /* Заголовок */
-.partners-block  {
+.partners-block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
+
 .partners-title {
     font-family: Proxima, sans-serif;
     font-size: 45px;
@@ -690,7 +687,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 /* Лого  */
@@ -722,3 +719,92 @@ body {
     font-family: Inter, sans-serif;
 }
 
+
+
+/* Контейнер */
+.equip-block {
+    margin: 0 auto;
+    height: 523px;
+}
+
+/* Заголовок */
+.equip-title {
+    font-family: Proxima, sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    margin-left: 49px;
+    margin-bottom: 40px;
+}
+
+/* Переключатели */
+.equip-switch {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    margin-bottom: 40px;
+}
+
+.eqb {
+    width: 358px;
+    height: 44px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: Inter, sans-serif;
+
+    border: 2px solid #4D96BF;
+    background: none;
+    cursor: pointer;
+}
+
+.eqb.active {
+    background: #4D96BF;
+    color: #fff;
+}
+
+/* Сетка карточек */
+.equip-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 30px;
+    margin-bottom: 60px;
+}
+
+/* Карточка */
+.equip-card {
+    width: 355px;
+    height: 147px;
+    background: #FFFFFF;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Лого */
+.equip-card img {
+    max-width: 90%;
+    max-height: 70%;
+    object-fit: contain;
+}
+
+/* Кнопка */
+.equip-btn {
+    display: block;
+    width: 300px;
+    height: 50px;
+    background: #FF7A3A;
+    color: #fff;
+
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+
+    border-radius: 8px;
+    margin: 0 auto;
+    text-decoration: none;
+}

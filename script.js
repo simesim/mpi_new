@@ -191,3 +191,45 @@ switchers.forEach(btn => {
 
 loadGroup("g1");
 
+const equipmentData = {
+    e1: {
+        items: ["o1.png", "o2.png"],
+        url: "https://mpi-corp.ru/klientskie_resheniya"
+    },
+    e2: {
+        items: ["o3.png", "o4.png"],
+        url: "https://mpi-corp.ru/servera_i_setevoe_oborudovanie"
+    },
+    e3: {
+        items: ["o5.png", "o6.png", "o7.png"],
+        url: "https://mpi-corp.ru/promyshlennoe_oborudovanie1"
+    }
+};
+
+const eqButtons = document.querySelectorAll('.eqb');
+const eqGrid = document.getElementById('equip-grid');
+const eqBtn = document.getElementById('equip-btn');
+
+function loadEquip(group) {
+    const data = equipmentData[group];
+
+    eqGrid.innerHTML = "";
+    data.items.forEach(img => {
+        const card = document.createElement("div");
+        card.className = "equip-card";
+        card.innerHTML = `<img src="img/${img}" alt="">`;
+        eqGrid.appendChild(card);
+    });
+
+    eqBtn.href = data.url;
+}
+
+eqButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        eqButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        loadEquip(btn.dataset.group);
+    });
+});
+
+loadEquip("e1");

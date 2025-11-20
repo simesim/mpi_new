@@ -615,8 +615,110 @@ body {
     width: 463px;
     height: 417px;
 
-    z-index: 0;    
-    filter: blur(4px); 
-    opacity: 0.7; 
+    z-index: 0;
+    filter: blur(4px);
+    opacity: 0.7;
+}
+
+/* Внешний блок */
+/* .partners-block {
+    width: 100%;
+    padding-top: 60px;
+} */
+
+/* Заголовок */
+.partners-block  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.partners-title {
+    font-family: Proxima, sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    margin-left: 49px;
+}
+
+/* Переключатели */
+.partners-switch {
+    display: flex;
+    gap: 45px;
+    margin: 0 auto 40px auto;
+    justify-content: center;
+}
+
+.psw {
+    width: 358px;
+    height: 44px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: Inter, sans-serif;
+
+    border: 2px solid #4D96BF;
+    background: none;
+    cursor: pointer;
+}
+
+.psw.active {
+    background: #4D96BF;
+    color: #fff;
+}
+
+/* Сетка карточек */
+.partners-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 355px);
+    grid-template-rows: repeat(2, 147px);
+    gap: 15px 31px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+/* Карточка */
+.partner-card {
+    width: 355px;
+    height: 147px;
+    background: #FFFFFF;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Лого  */
+.partner-card img {
+    max-width: 90%;
+    max-height: 70%;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Кнопка */
+.partners-btn {
+    display: block;
+    width: 300px;
+    height: 50px;
+
+    margin: 0 auto 40px auto;
+
+    background: #FF7A3A;
+    color: #fff;
+
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+
+    text-decoration: none;
+    font-family: Inter, sans-serif;
 }
 

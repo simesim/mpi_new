@@ -125,3 +125,69 @@ document.addEventListener("DOMContentLoaded", function () {
         grabCursor: true
     });
 });
+/* Партнеры переключатели */
+const MPIpartners = {
+    g1: [
+        "img/p1.png",
+        "img/p2.png",
+        "img/p3.png",
+        "img/p4.png",
+        "img/p5.png",
+        "img/p6.png",
+    ],
+    g2: [
+        "img/p7.png",
+        "img/p8.png",
+        "img/p9.png",
+        "img/p10.png",
+        "img/p11.png",
+        "img/p12.png",
+    ],
+    g3: [
+        "img/p13.png",
+        "img/p14.png",
+        "img/p15.png",
+        "img/p16.png",
+        "img/p17.png",
+        "img/p18.png",
+    ]
+};
+
+const urlByGroup = {
+    g1: "https://mpi-corp.ru/inzhenernoe_po",
+    g2: "https://mpi-corp.ru/informacionnaya_bezopasnost",
+    g3: "https://mpi-corp.ru/infrastrukturnoe_po"
+};
+
+const grid = document.getElementById("partners-grid");
+const partnersBtn = document.getElementById("partners-btn");
+const switchers = document.querySelectorAll(".psw");
+
+function loadGroup(g) {
+    grid.innerHTML = "";
+
+    MPIpartners[g].forEach(src => {
+        const card = document.createElement("div");
+        card.className = "partner-card";
+
+        const img = document.createElement("img");
+        img.src = src;
+
+        card.appendChild(img);
+        grid.appendChild(card);
+    });
+
+    partnersBtn.href = urlByGroup[g];
+}
+
+switchers.forEach(btn => {
+    btn.addEventListener("click", () => {
+        switchers.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        loadGroup(btn.dataset.group);
+    });
+});
+
+loadGroup("g1");
+

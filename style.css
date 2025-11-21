@@ -1,3 +1,4 @@
+/* skffksdk */
 @font-face {
     font-family: "Inter";
     src: url("./fonts/Inter-Regular.woff") format("woff");
@@ -57,6 +58,7 @@ body {
 body,
 html {
     overflow-x: hidden;
+
 }
 
 /* Базовый контейнер */

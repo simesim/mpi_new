@@ -759,31 +759,34 @@ html {
 /* ФОРМА 2 */
 .efficiency-block {
     width: 100%;
-    height: 523px;
     background: #142E43;
+    padding: 80px 0;
     position: relative;
 }
 
+.efficiency-block .container {
+    width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
 /* Заголовок */
 .eff-title {
-    position: absolute;
-    left: 10px;
-    top: 120px;
-
-    width: 664px;
+    width: 700px;
     font-size: 35px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.2;
     color: #FFFFFF;
 }
 
 /* Форма */
 .eff-form {
-    position: absolute;
-    left: 759px;
-    top: 39px;
     width: 431px;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-field {
@@ -824,7 +827,7 @@ html {
 
 /* Кнопка */
 .eff-btn {
-    width: 300px;
+    width: 260px;
     height: 50px;
     border-radius: 15px;
     border: none;
@@ -836,6 +839,7 @@ html {
     font-weight: 500;
 }
 
+/* Треугольники — абсолютные (декор) */
 .tri-left {
     position: absolute;
     left: -420px;
@@ -846,11 +850,10 @@ html {
     pointer-events: none;
 }
 
-/* Правый треугольник */
 .tri-right {
     position: absolute;
-    left: calc(1200px + 100px);
-    top: 7px;
+    right: -420px;
+    top: -30px;
     width: 463px;
     height: 417px;
     filter: blur(4px);
@@ -859,19 +862,27 @@ html {
 
 
 /* КОНТАКТЫ */
+
 .contacts-block {
     width: 100%;
-    height: 530px;
     background: #FFFFFF;
+    padding: 40px 0 80px 0;
     position: relative;
     overflow: hidden;
 }
 
+.contacts-block .container {
+    width: 1200px;
+    margin: 0 auto;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Левая колонка */
 .contacts-left {
-    position: absolute;
-    top: 40px;
-    left: 10px;
+    width: 45%;
 }
 
 .contacts-title {
@@ -900,17 +911,12 @@ html {
 .contact-phone {
     font-size: 22px;
     font-weight: 500;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
-.contact-email {
-    margin-top: 25px;
-}
-
+/* Правая колонка */
 .contacts-right {
-    position: absolute;
-    top: 40px;
-    left: 780px;
+    width: 45%;
 }
 
 .support-title {
@@ -925,16 +931,14 @@ html {
     font-weight: 300;
     color: #000;
     text-decoration: none;
+    display: block;
+    margin-bottom: 25px;
 }
 
 .support-item {
     display: flex;
     align-items: center;
-    margin-top: 20px;
-}
-
-.support-item.second {
-    margin-top: 14px;
+    margin-top: 18px;
 }
 
 .tg-icon {
@@ -952,15 +956,17 @@ html {
 
 /* Официальный канал */
 .official-title {
-    margin-top: 40px;
     font-size: 22px;
     font-weight: 500;
+    margin-top: 55px;
+    /* ТОЧНО как в макете */
+    margin-bottom: 15px;
 }
 
 .channels {
     display: flex;
     gap: 11px;
-    margin-top: 15px;
+    margin-bottom: 35px;
 }
 
 .channel-icon {
@@ -968,32 +974,29 @@ html {
     height: 33px;
 }
 
-/* Кнопка */
 .contact-btn {
     display: block;
     width: 217px;
     height: 55px;
     background: #FF7A3A;
     border-radius: 15px;
+
     font-size: 20px;
     font-weight: 500;
     color: #fff;
+
     text-align: center;
     line-height: 55px;
-
     text-decoration: none;
-    margin-top: 45px;
+    margin-top: 40px;
 }
 
-/* Картинка справа */
 .support-illustration {
     position: absolute;
+    right: -100px;
+    bottom: -40px;
     width: 517px;
     height: 466px;
-
-    left: 833px;
-    top: 134px;
-
     object-fit: contain;
     pointer-events: none;
 }
@@ -1438,7 +1441,6 @@ html {
         margin: 0 auto 40px;
     }
 
-    /* Переключатели → колонкой */
     .partners-switch {
         width: 309px;
         display: flex;
@@ -1517,7 +1519,6 @@ html {
         font-size: 18px;
     }
 
-    /* Сетка → колонка */
     .equip-grid {
         flex-direction: column;
         align-items: center;
@@ -1525,12 +1526,10 @@ html {
         width: 100%;
     }
 
-    /* Скрываем все карточки */
     .equip-card {
         display: none;
     }
 
-    /* Показываем только первую */
     .equip-card:nth-child(1) {
         display: flex;
     }
@@ -1550,12 +1549,10 @@ html {
         margin-left: 0;
     }
 
-    /* Скрываем оба маркви на телефоне */
     .marquee {
-        display: none !important;
+        display: none;
     }
 
-    /* Включаем мобильный swiper */
     .clients-swiper {
         display: block;
         width: 320px;
@@ -1563,19 +1560,17 @@ html {
     }
 
     .clients-title {
-        font-size: 30px !important;
-        text-align: center !important;
-        margin-left: 0 !important;
+        font-size: 30px;
+        text-align: center;
+        margin-left: 0;
     }
 
-    /* Отключаем обе бегущие строки */
     .marquee {
-        display: none !important;
+        display: none;
     }
 
-    /* Включаем Swiper */
     .clients-swiper {
-        display: block !important;
+        display: block;
         width: 320px;
         margin: 0 auto;
     }
@@ -1586,7 +1581,6 @@ html {
         align-items: center;
     }
 
-    /* Карточка в свайпере */
     .client-card {
         width: 300px !important;
         height: 147px !important;
@@ -1602,6 +1596,260 @@ html {
         max-width: 90% !important;
         max-height: 80% !important;
     }
+
+
+
+    .efficiency-block {
+        width: 100%;
+        height: 574px;
+        background: #142E43;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    .efficiency-block .container {
+        width: 100%;
+        max-width: 320px;
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .eff-title {
+        position: static;
+        width: 297px;
+        font-size: 25px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-align: center;
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* --- Форма --- */
+    .eff-form {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .form-field {
+        margin-bottom: 20px;
+    }
+
+    .form-field label {
+        font-size: 14px;
+        color: #fff;
+        margin-bottom: 5px;
+    }
+
+    .form-field input {
+        height: 50px;
+        border-radius: 15px;
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    .checkbox {
+        font-size: 14px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .checkbox input {
+        margin-right: 10px;
+    }
+
+    .eff-btn {
+        width: 300px;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 15px;
+    }
+
+    .tri-left,
+    .tri-right {
+        display: none;
+    }
+
+    .contacts-block {
+        padding: 0;
+        height: auto;
+        overflow: visible;
+        padding-bottom: 20px
+    }
+
+    .contacts-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 20px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .contacts-left,
+    .contacts-right {
+        position: static;
+        width: 100%;
+    }
+
+    .contacts-title,
+    .support-title {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .city-title,
+    .city-address,
+    .contact-email,
+    .contact-phone,
+    .support-mail,
+    .tg-text,
+    .official-title {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    .city-block {
+        margin-bottom: 20px;
+    }
+
+    .support-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .tg-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .official-block {
+        margin-top: 20px;
+    }
+
+    .channels {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .channel-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* КНОПКА — исправлена */
+    .contact-btn {
+        width: 300px;
+        height: 52px;
+        line-height: 52px;
+        font-size: 16px;
+        display: block;
+        margin: 25px auto 10px auto;
+        border-radius: 12px;
+        text-align: center;
+
+        background: #FF7A3A !important;
+        color: #fff !important;
+
+        position: relative;
+        z-index: 10;
+    }
+
+    /* КАРТИНКА — чтобы не перекрывала */
+    .support-illustration {
+        display: block;
+        width: 200px !important;
+        height: auto !important;
+        position: relative !important;
+        margin: 20px auto 0 auto;
+        transform: rotate(0deg);
+
+        z-index: 0 !important;
+        pointer-events: none;
+    }
+
+
+
+    .footer-block {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .footer-container {
+        width: 100%;
+        max-width: 360px;
+        /* как на тильде */
+        padding: 0 20px;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .footer-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Лого */
+    .footer-logo {
+        width: 87px;
+        height: 58px;
+        margin-bottom: 10px;
+    }
+
+    .footer-copy {
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+
+    .footer-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+        font-weight: 400;
+    }
+
+    .footer-link {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    .footer-legal {
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    .footer-legal-container {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .footer-legal-year {
+        font-size: 16px;
+    }
+
+    .footer-legal-text {
+        font-size: 12px;
+    }
+
 }
 
 @media (min-width: 481px) {

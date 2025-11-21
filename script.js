@@ -201,7 +201,7 @@ const eqBtn = document.getElementById('equip-btn');
 function loadEquip(group) {
     const data = equipmentData[group];
 
-    if (!data) return; 
+    if (!data) return;
 
     eqGrid.innerHTML = "";
 
@@ -230,3 +230,31 @@ eqButtons.forEach(btn => {
 
 loadEquip("g1");
 
+
+if (window.innerWidth <= 480) {
+
+    const logos = Array.from(document.querySelectorAll('.marquee img.client-card'))
+        .map(img => img.getAttribute('src'));
+
+    const wrapper = document.querySelector('.clients-swiper .swiper-wrapper');
+
+    logos.forEach(src => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+
+        slide.innerHTML = `
+            <div class="client-card">
+                <img src="${src}" alt="">
+            </div>
+        `;
+
+        wrapper.appendChild(slide);
+    });
+
+    new Swiper('.clients-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        speed: 600,
+        loop: true
+    });
+}

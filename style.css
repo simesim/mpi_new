@@ -129,6 +129,7 @@ html {
     line-height: 60px;
     color: #fff;
     margin: 0 0 30px;
+    width: 620px;
 }
 
 .fs-text {
@@ -1049,6 +1050,8 @@ html {
     font-weight: 400;
 }
 
+
+
 @media (max-width: 480px) {
     .container {
         width: 320px;
@@ -1501,5 +1504,70 @@ html {
         font-size: 16px;
         border-radius: 10px;
         margin: 20px auto 0;
+    }
+
+    .clients-title {
+        font-size: 30px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    /* Скрываем оба маркви на телефоне */
+    .marquee {
+        display: none !important;
+    }
+
+    /* Включаем мобильный swiper */
+    .clients-swiper {
+        display: block;
+        width: 320px;
+        margin: 0 auto;
+    }
+
+    .clients-title {
+        font-size: 30px !important;
+        text-align: center !important;
+        margin-left: 0 !important;
+    }
+
+    /* Отключаем обе бегущие строки */
+    .marquee {
+        display: none !important;
+    }
+
+    /* Включаем Swiper */
+    .clients-swiper {
+        display: block !important;
+        width: 320px;
+        margin: 0 auto;
+    }
+
+    .clients-swiper .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Карточка в свайпере */
+    .client-card {
+        width: 300px !important;
+        height: 147px !important;
+        background: #fff;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .client-card img {
+        max-width: 90% !important;
+        max-height: 80% !important;
+    }
+}
+
+@media (min-width: 481px) {
+    .clients-swiper {
+        display: none !important;
     }
 }

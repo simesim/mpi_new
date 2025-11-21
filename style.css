@@ -549,35 +549,43 @@ html {
 
 /* Контейнер */
 .equip-block {
+    width: 100%;
+    padding: 60px 0;
+    background: #fff;
+}
+
+.equip-inner {
+    width: 1200px;
     margin: 0 auto;
-    height: 523px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Заголовок */
 .equip-title {
-    font-family: Proxima, sans-serif;
     font-size: 45px;
     font-weight: 700;
-    margin-left: 49px;
     margin-bottom: 40px;
+    text-align: center;
 }
 
 /* Переключатели */
 .equip-switch {
     display: flex;
-    justify-content: center;
     gap: 45px;
     margin-bottom: 40px;
+    justify-content: center;
 }
 
 .eqb {
     width: 358px;
     height: 44px;
     border-radius: 8px;
-    font-size: 20px;
-
     border: 2px solid #4D96BF;
     background: none;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .eqb.active {
@@ -585,30 +593,31 @@ html {
     color: #fff;
 }
 
-/* Сетка карточек */
+/* Сетка */
 .equip-grid {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 30px 30px;
-    margin-bottom: 60px;
+    justify-content: center;
+    gap: 31px;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 /* Карточка */
 .equip-card {
     width: 355px;
     height: 147px;
-    background: #FFFFFF;
     border-radius: 15px;
+    background: #fff;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
 }
 
-/* Лого */
 .equip-card img {
     max-width: 90%;
     max-height: 70%;
@@ -617,20 +626,19 @@ html {
 
 /* Кнопка */
 .equip-btn {
-    display: block;
     width: 300px;
     height: 50px;
     background: #FF7A3A;
-    color: #fff;
-
-    font-size: 20px;
-    text-align: center;
-    line-height: 50px;
-
     border-radius: 8px;
-    margin: 0 auto;
+    color: #fff;
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
 }
+
 
 
 /* КЛИЕНТЫ */
@@ -1442,5 +1450,56 @@ html {
         font-size: 16px;
         line-height: 50px;
         margin: 0 auto;
+    }
+
+    .equip-inner {
+        width: 320px;
+    }
+
+    .equip-title {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+
+    .equip-switch {
+        width: 309px;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .equip-switch .eqb {
+        width: 309px;
+        height: 44px;
+        border-radius: 12px;
+        font-size: 18px;
+    }
+
+    /* Сетка → колонка */
+    .equip-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    /* Скрываем все карточки */
+    .equip-card {
+        display: none;
+    }
+
+    /* Показываем только первую */
+    .equip-card:nth-child(1) {
+        display: flex;
+    }
+
+    /* Кнопка */
+    .equip-btn {
+        width: 300px;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 10px;
+        margin: 20px auto 0;
     }
 }

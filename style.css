@@ -16,11 +16,37 @@
 
 @font-face {
     font-family: "Proxima";
-    src: url("/mnt/data/ProximaNova-Bold.woff") format("woff");
+    src: url("./fonts/ProximaNova-Bold.woff") format("woff");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: "Proxima";
+    src: url("./fonts/proximanova_regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Proxima";
+    src: url("./fonts/AnyConv.com__proximanova_bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "Proxima";
+    src: url("./fonts/proximanova_black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 body {
     margin: 0;
@@ -1130,47 +1156,56 @@ html {
 
     /* ПЕРВЫЙ ЭКРАН */
     .first-screen {
-        height: 586px;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        height: auto;
+        background: #142E43;
+        padding: 40px 0;
         text-align: center;
-        position: relative;
     }
 
     .first-inner {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
+    /* Заголовок */
     .fs-title {
         font-size: 30px;
-        line-height: 1.2;
-        margin: 30px 0 0 0;
+        line-height: 1.25;
+        font-weight: 700;
+        margin: 0 0 20px 0;
+        text-align: center;
+        width: 100%;
     }
 
+    /* Текст */
     .fs-text {
         font-size: 16px;
-        line-height: 1.3;
-        width: 300px;
-        margin-top: 30px;
+        line-height: 1.35;
+        margin-top: 0;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
     }
 
+    /* Кнопка */
     .fs-btn {
+        margin-top: 25px;
         width: 300px;
         height: 50px;
-        line-height: 50px;
         font-size: 16px;
-        margin-top: 35px;
-        border-radius: 8px;
-        text-align: center;
-        display: block;
+        line-height: 50px;
+        border-radius: 10px;
     }
 
+    /* Картинку скрываем */
     .fs-image {
-        display: none;
+        display: none !important;
     }
 
     .numbers-block {

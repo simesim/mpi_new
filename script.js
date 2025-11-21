@@ -18,7 +18,6 @@ document.addEventListener("mousemove", function (e) {
 
 
 /* Кнопки новоссти, акции и тд */
-
 const data = {
     news: {
         btn: "https://mpi-corp.ru/novosti",
@@ -37,7 +36,7 @@ const data = {
     },
 
     sales: {
-        btn: "https://mpi-corp.ru/akcii",
+        btn: "https://mpi-corp.ru/акции",
         col1: {
             date: "18 сентября 2025",
             text: "Программа «Реновация»: обновляйте инфраструктуру с выгодой до 25%"
@@ -64,7 +63,7 @@ const data = {
         },
         col3: {
             date: "09 сентября 2025",
-            text: "Вебинар «КОМПАС-3D - Строительная конфигурация. Возможности приложения «Электроснабжение ЭС/ЭМ»"
+            text: "Вебинар «КОМПАС-3D – Электроснабжение ЭС/ЭМ»"
         }
     }
 };
@@ -74,14 +73,7 @@ const tabNews = document.getElementById("tab-news");
 const tabSales = document.getElementById("tab-sales");
 const tabEvents = document.getElementById("tab-events");
 
-const col1Date = document.querySelector(".col1-date");
-const col1Text = document.querySelector(".col1-text");
-
-const col2Date = document.querySelector(".col2-date");
-const col2Text = document.querySelector(".col2-text");
-
-const col3Date = document.querySelector(".col3-date");
-const col3Text = document.querySelector(".col3-text");
+const newsItems = document.querySelectorAll(".news-item");
 
 const btnMore = document.querySelector(".btn-more");
 
@@ -89,25 +81,22 @@ const btnMore = document.querySelector(".btn-more");
 function setActiveTab(type) {
 
     document.querySelectorAll(".tab").forEach(t => t.classList.remove("tab-active"));
-
-    if (type === "news") tabNews.classList.add("tab-active");
-    if (type === "sales") tabSales.classList.add("tab-active");
-    if (type === "events") tabEvents.classList.add("tab-active");
+    document.getElementById("tab-" + type).classList.add("tab-active");
 
     const block = data[type];
 
-    col1Date.textContent = block.col1.date;
-    col1Text.textContent = block.col1.text;
+    const cols = [block.col1, block.col2, block.col3];
 
-    col2Date.textContent = block.col2.date;
-    col2Text.textContent = block.col2.text;
+    newsItems.forEach((item, i) => {
+        const dateEl = item.querySelector(".date");
+        const textEl = item.querySelector(".text");
 
-    col3Date.textContent = block.col3.date;
-    col3Text.textContent = block.col3.text;
+        dateEl.textContent = cols[i].date;
+        textEl.textContent = cols[i].text;
+    });
 
     btnMore.href = block.btn;
 }
-
 
 tabNews.addEventListener("click", () => setActiveTab("news"));
 tabSales.addEventListener("click", () => setActiveTab("sales"));
@@ -115,7 +104,6 @@ tabEvents.addEventListener("click", () => setActiveTab("events"));
 
 setActiveTab("news");
 
-/* Свайпер */
 document.addEventListener("DOMContentLoaded", () => {
     new Swiper(".features-swiper", {
         slidesPerView: "auto",

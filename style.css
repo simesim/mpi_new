@@ -1,14 +1,6 @@
 @font-face {
-    font-family: 'Proxima';
-    src: url('./fonts/proxima-nova.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('./fonts/Inter-Regular.otf') format('opentype');
+    font-family: "Inter";
+    src: url("./fonts/Inter-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -16,14 +8,18 @@
 
 @font-face {
     font-family: "Inter";
-    src: url('./fonts/Inter-Light.otf') format('opentype');
-    font-weight: 300;
+    src: url("./fonts/Inter-Black.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "Inter";
-    src: url('./fonts/Inter-Medium.otf') format('opentype');
-    font-weight: 500;
+    font-family: "Proxima";
+    src: url("/mnt/data/ProximaNova-Bold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
 
 body {
@@ -166,86 +162,33 @@ html {
 /* Блок с цифрами */
 
 .numbers-block {
-    position: relative;
-    height: 240px;
-    background-color: #ffffff;
+    background: #fff;
+    padding: 40px 0;
     text-align: center;
 }
 
+/* 3 колонки */
+.numbers-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 240px;
+}
 
+/* Элемент */
+.num-item {
+    width: 33%;
+}
 
-/* 3 колонка */
-
-.n1-title {
-    position: absolute;
-    left: 71px;
-    top: 40px;
-    /*     width: 150px; */
-    height: 60px;
+.num-title {
     color: #FF7A3A;
     font-size: 50px;
     font-weight: 400;
+    margin-bottom: 8px;
 }
 
-.n1-text {
-    position: absolute;
-    left: 40px;
-    top: 108px;
-    width: 216px;
-    height: 72px;
-    color: #000000;
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 1.2;
-}
-
-
-/* 2 колонгка */
-
-.n2-title {
-    position: absolute;
-    left: 491px;
-    top: 40px;
-    width: 178px;
-    height: 60px;
-    color: #FF7A3A;
-    font-size: 50px;
-    font-weight: 400;
-}
-
-.n2-text {
-    position: absolute;
-    left: 451px;
-    top: 108px;
-    width: 257px;
-    height: 72px;
-    color: #000000;
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 1.2;
-}
-
-
-/* 3 колонка */
-
-.n3-title {
-    position: absolute;
-    left: 982px;
-    top: 40px;
-    width: 100px;
-    height: 60px;
-    color: #FF7A3A;
-    font-size: 50px;
-    font-weight: 400;
-}
-
-.n3-text {
-    position: absolute;
-    left: 903px;
-    top: 108px;
-    width: 257px;
-    height: 72px;
-    color: #000000;
+.num-text {
+    color: #000;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.2;
@@ -254,168 +197,124 @@ html {
 /* Акции, меропрития и новсти  */
 
 .news-block {
-    position: relative;
     height: 389px;
+    position: relative;
 }
 
-/* Кнопки */
+/* --- ТАБЫ --- */
+.tabs-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 56px;
+}
+
 .tab {
-    position: absolute;
     width: 220px;
     height: 44px;
     border-radius: 15px;
-    background: transparent;
     border: 2px solid #4D96BF;
-    color: #000000;
-    font-size: 20px;
     text-align: center;
     line-height: 44px;
+    font-size: 20px;
+    color: #000;
 }
 
 .tab-active {
     background: #4D96BF;
-    color: #FFFFFF;
+    color: #fff;
 }
 
-/* Позиции кнопок */
-#tab-news {
-    left: 25px;
-    top: 56px;
+/* --- ТРИ КОЛОНКИ --- */
+.news-row {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
 }
 
-#tab-sales {
-    left: 490px;
-    top: 56px;
-}
-
-#tab-events {
-    left: 955px;
-    top: 56px;
-}
-
-/* Текстовые элементы */
-.date {
-    position: absolute;
-    font-size: 16px;
-    font-weight: 200;
-    /* ExtraLight */
-    color: #000000;
-}
-
-.text {
-    position: absolute;
-    font-size: 20px;
-    font-weight: 300;
-    color: #000000;
-    line-height: 1.2;
-}
-
-/* Позиции дат */
-.col1-date {
-    left: 27px;
-    top: 132px;
-}
-
-.col2-date {
-    left: 427px;
-    top: 132px;
-}
-
-.col3-date {
-    left: 898px;
-    top: 132px;
-}
-
-/* Позиции текстов */
-.col1-text {
-    left: 27px;
-    top: 171px;
+.news-item {
     width: 316px;
 }
 
-.col2-text {
-    left: 427px;
-    top: 159px;
+.news-item:nth-child(2) {
     width: 400px;
 }
 
-.col3-text {
-    left: 898px;
-    top: 171px;
+.news-item:nth-child(3) {
     width: 292px;
 }
 
-/* Кнопка "Смотреть все" */
+.date {
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
 .btn-more {
-    position: absolute;
-    left: 492px;
-    top: 274px;
     width: 216px;
     height: 55px;
-    background: #FF7A3A;
     border-radius: 15px;
+    background: #FF7A3A;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #FFFFFF;
     font-size: 20px;
     text-decoration: none;
+    margin: 40px auto 0 auto;
 }
 
 /* О НАС*/
-.about-container {
-    position: relative;
-    height: 330px;
-    background: #142E43;
-}
-
 .about-section {
     width: 100%;
-    background: #142E43;
     height: 330px;
+    background: #142E43;
+    display: flex;
+    align-items: center;
+    padding-top: 25px; 
 }
 
-/* Заголовок */
+.about-inner {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.about-left {
+    padding-left: 10px;
+    width: 662px;
+}
+
 .about-title {
-    position: absolute;
-    left: 10px;
-    top: 40px;
-
-    height: 54px;
-
+    margin: 40px 0 20px 0;
     color: #FFFFFF;
     font-size: 45px;
-    font-family: Proxima, sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 1.2;
-    margin: 0;
     white-space: nowrap;
 }
 
-/* текст */
 .about-text {
-    position: absolute;
-    left: 10px;
-    top: 114px;
-
     width: 662px;
-
     color: #FFFFFF;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.2;
-    margin: 0;
 }
 
-/* Картинка справа */
 .about-img {
-    position: absolute;
-    left: 703px;
-    top: -66px;
-
     width: 517px;
     height: 466px;
+    margin-top: -66px;
+    margin-left: 40px;
 }
+
 
 
 .features {
@@ -1158,7 +1057,7 @@ html {
     font-weight: 400;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .container {
         width: 320px;
         margin: 0 auto;
@@ -1270,10 +1169,8 @@ html {
         line-height: 50px;
         font-size: 16px;
         margin-top: 35px;
-        background: #FF7A3A;
         border-radius: 8px;
         text-align: center;
-        color: #fff;
         display: block;
     }
 
@@ -1283,79 +1180,36 @@ html {
 
     .numbers-block {
         height: 414px;
-        background: #fff;
-        position: relative;
+        padding-top: 40px;
+        text-align: center;
     }
 
+    .numbers-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        height: auto;
+    }
 
-    .n1-title {
-        position: absolute;
-        left: 115px;
-        top: 40px;
-        height: 36px;
+    .num-item {
+        width: 100%;
+    }
+
+    .num-title {
         font-size: 30px;
-        color: #FF7A3A;
-        text-align: center;
+        height: auto;
+        line-height: 36px;
+        margin-bottom: 10px;
     }
 
-    .n1-text {
-        position: absolute;
-        left: 73px;
-        top: 81px;
-        width: 173px;
-        height: 57px;
+    .num-text {
         font-size: 16px;
-        text-align: center;
         line-height: 1.2;
+        width: 240px;
+        margin: 0 auto;
         color: #000;
     }
-
-    .n2-title {
-        position: absolute;
-        left: 106px;
-        top: 158px;
-        width: 107px;
-        height: 36px;
-        font-size: 30px;
-        color: #FF7A3A;
-        text-align: center;
-    }
-
-    .n2-text {
-        position: absolute;
-        left: 57px;
-        top: 199px;
-        width: 205px;
-        height: 57px;
-        font-size: 16px;
-        text-align: center;
-        line-height: 1.2;
-        color: #000;
-    }
-
-    .n3-title {
-        position: absolute;
-        left: 130px;
-        top: 276px;
-        width: 60px;
-        height: 36px;
-        font-size: 30px;
-        color: #FF7A3A;
-        text-align: center;
-    }
-
-    .n3-text {
-        position: absolute;
-        left: 61px;
-        top: 317px;
-        width: 198px;
-        height: 57px;
-        font-size: 16px;
-        text-align: center;
-        line-height: 1.2;
-        color: #000;
-    }
-
 
     .news-block {
         width: 343px;
@@ -1364,10 +1218,22 @@ html {
         position: relative;
     }
 
-    #tab-news {
-        position: absolute;
-        left: 50px;
-        top: 40px;
+    .news-block {
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    .tabs-row {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 40px;
+        align-items: center;
+    }
+
+    #tab-news,
+    #tab-sales,
+    #tab-events {
         width: 220px;
         height: 44px;
         font-size: 20px;
@@ -1375,65 +1241,43 @@ html {
         border-radius: 10px;
     }
 
-    #tab-sales {
-        position: absolute;
-        left: 50px;
-        top: 99px;
-        width: 220px;
-        height: 44px;
-        font-size: 20px;
-        line-height: 44px;
+    .news-row {
+        margin-top: 40px;
+        flex-direction: column;
+        align-items: center;
     }
 
-    #tab-events {
-        position: absolute;
-        left: 50px;
-        top: 158px;
-        width: 220px;
-        height: 44px;
-        font-size: 20px;
-        line-height: 44px;
+    .news-item:nth-child(2),
+    .news-item:nth-child(3) {
+        display: none;
     }
 
-    .col1-date {
-        position: absolute;
-        left: 71px;
-        top: 228px;
-        width: 139px;
-        height: 19px;
+    .news-item {
+        width: 200px;
+        text-align: left;
+    }
+
+    .date {
         font-size: 16px;
         line-height: 19px;
+        margin-left: 20px;
     }
 
-    .col1-text {
-        position: absolute;
-        left: 71px;
-        top: 267px;
+    .text {
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 10px;
+        margin-left: 20px;
         width: 178px;
-        height: 57px;
-        font-size: 16px;
-        line-height: 19px;
     }
 
     .btn-more {
-        position: absolute;
-        left: 69px;
-        top: 362px;
         width: 182px;
         height: 42px;
         font-size: 16px;
         line-height: 42px;
         border-radius: 10px;
-        background: #FF7A3A;
-        color: #fff;
-        text-align: center;
-    }
-
-    .col2-date,
-    .col2-text,
-    .col3-date,
-    .col3-text {
-        display: none;
+        margin: 40px auto 0 auto;
     }
 
 
@@ -1443,32 +1287,38 @@ html {
         height: 364px;
         background: #0F2C42;
         overflow: hidden;
+        display: flex;
+        align-items: flex-start;
     }
 
+    .about-inner {
+        flex-direction: column;
+        padding-top: 40px;
+    }
 
     .about-title {
-        position: absolute;
-        left: 114px;
-        top: 40px;
-        width: 93px;
-        height: 36px;
         font-size: 30px;
-        line-height: 1.2;
         font-weight: 700;
         color: #FFFFFF;
         text-align: left;
+        margin: 0 auto 20px auto;
+        width: 93px;
+        /* как у тебя в макете */
+    }
+
+    .about-left {
+        width: 100%;
+        padding-left: 0;
     }
 
     .about-text {
-        position: absolute;
-        left: 28px;
-        top: 96px;
-        width: 265px;
-        height: 228px;
         font-size: 16px;
+        width: 265px;
+        margin: 0 auto;
         line-height: 1.2;
         color: #FFFFFF;
         text-align: left;
+        height: auto;
     }
 
     .about-img {

@@ -2,7 +2,7 @@
 @font-face {
     font-family: "Inter";
     src: url("./fonts/Inter-Regular.woff") format("woff");
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
@@ -52,6 +52,7 @@
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
+    font-weight: 300;
 }
 
 
@@ -138,8 +139,9 @@ html {
 /* ПЕРВЫЙ БЛОК */
 .first-screen {
     background: #142E43;
-    padding: 80px 0 40px;
-    height: 540px;
+    padding: 80px 0 60px;
+    /*     height: 540px; */
+    height: auto;
 }
 
 .first-inner {
@@ -159,6 +161,7 @@ html {
     margin: 0 0 30px;
     width: 620px;
     font-family: 'Proxima';
+    font-weight: 700;
 }
 
 .fs-text {
@@ -184,17 +187,19 @@ html {
 .fs-image {
     position: absolute;
     right: -100px;
-    top: -80px;
+    top: -200px;
     width: 830px;
     pointer-events: none;
+    z-index: 0;
 }
 
 /* Блок с цифрами */
 
 .numbers-block {
     background: #fff;
-    padding: 40px 0;
+    padding: 30px 0;
     text-align: center;
+    z-index: 2;
 }
 
 /* 3 колонки */
@@ -202,7 +207,8 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    height: 240px;
+    /*     height: 240px; */
+    height: auto;
 }
 
 /* Элемент */
@@ -227,11 +233,13 @@ html {
 /* Акции, меропрития и новсти  */
 
 .news-block {
-    height: 389px;
+    /*     height: 389px; */
+    height: auto;
     position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-/* --- ТАБЫ --- */
 .tabs-row {
     display: flex;
     justify-content: space-between;
@@ -248,6 +256,7 @@ html {
     line-height: 44px;
     font-size: 20px;
     color: #000;
+    font-weight: 400;
 }
 
 .tab-active {
@@ -255,9 +264,8 @@ html {
     color: #fff;
 }
 
-/* --- ТРИ КОЛОНКИ --- */
 .news-row {
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
 }
@@ -297,7 +305,7 @@ html {
     color: #FFFFFF;
     font-size: 20px;
     text-decoration: none;
-    margin: 40px auto 0 auto;
+    margin: 25px auto 0 auto;
 }
 
 /* О НАС*/
@@ -360,7 +368,6 @@ html {
     margin: 0 auto;
 }
 
-/* Swiper wrapper — только flex! */
 .features-swiper .swiper-wrapper {
     display: flex;
     flex-direction: row;
@@ -389,7 +396,7 @@ html {
 .help {
     width: 100%;
     background: #FFFFFF;
-    padding: 70px 0;
+    padding: 50px 0;
     box-sizing: border-box;
     position: relative;
 }
@@ -404,13 +411,14 @@ html {
 }
 
 .help-left {
-    width: 617px;
+    padding-top: 70px;
+    width: 650px;
 }
 
 .help-title {
     font-size: 35px;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 400;
     margin: 0;
     color: #000;
 }
@@ -419,7 +427,7 @@ html {
     margin-top: 25px;
     font-size: 20px;
     font-weight: 300;
-    width: 430px;
+    width: 470px;
     line-height: 1.2;
     color: #000;
 }
@@ -489,13 +497,11 @@ html {
 /* Заголовок */
 .partners-block {
     width: 100%;
-    padding: 60px 0;
 }
 
 .partners-inner {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 /* Заголовок */
@@ -503,7 +509,9 @@ html {
     font-family: Proxima, sans-serif;
     font-size: 45px;
     font-weight: 700;
-    margin-bottom: 40px;
+
+    margin-left: 10px;
+    margin-bottom: 35px;
 }
 
 /* Переключатели */
@@ -580,7 +588,7 @@ html {
 /* Контейнер */
 .equip-block {
     width: 100%;
-    padding: 60px 0;
+    padding: 40px 0;
     background: #fff;
 }
 
@@ -594,10 +602,12 @@ html {
 
 /* Заголовок */
 .equip-title {
+    font-family: Proxima, sans-serif;
     font-size: 45px;
     font-weight: 700;
-    margin-bottom: 40px;
-    text-align: center;
+    margin-left: 10px;
+    align-self: flex-start;
+    margin-bottom: 35px;
 }
 
 /* Переключатели */
@@ -683,9 +693,8 @@ html {
 .clients-title {
     font-family: Proxima, sans-serif;
     font-size: 45px;
-    font-weight: 400;
+    font-weight: 700;
     color: #fff;
-
     margin-left: 10px;
     margin-bottom: 35px;
 }
@@ -760,7 +769,7 @@ html {
 .efficiency-block {
     width: 100%;
     background: #142E43;
-    padding: 80px 0;
+    padding: 50px 0;
     position: relative;
 }
 
@@ -866,15 +875,12 @@ html {
 .contacts-block {
     width: 100%;
     background: #FFFFFF;
-    padding: 40px 0 80px 0;
+    padding: 40px 0 50px 0;
     position: relative;
     overflow: hidden;
 }
 
 .contacts-block .container {
-    width: 1200px;
-    margin: 0 auto;
-
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -1004,8 +1010,8 @@ html {
 
 .footer-block {
     width: 100%;
-    height: 390px;
-    padding-top: 20px;
+    height: auto;
+    padding: 0 0 40px 0;
 }
 
 .footer-container {
@@ -1751,7 +1757,7 @@ html {
         height: 32px;
     }
 
-    /* КНОПКА — исправлена */
+
     .contact-btn {
         width: 300px;
         height: 52px;

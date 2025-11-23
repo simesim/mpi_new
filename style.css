@@ -1299,7 +1299,8 @@ html {
         opacity: 1;
     }
 }
-/* Попап ЗАКАЗАТЬ ЗВОНОК */
+
+/* Попап ЗАКАЗАТЬ */
 .popup-close {
     position: absolute;
     right: 20px;
@@ -1395,27 +1396,16 @@ html {
         margin-top: 10px;
     }
 
-    .header-nav {
+    .nav-item {
         width: 100%;
         display: flex;
-        justify-content: space-between;
         padding: 0 16px;
-        margin-top: 50px;
-    }
-
-    .nav-solutions,
-    .nav-about {
         font-size: 18px;
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .nav-solutions {
-        margin-left: 0;
     }
 
     .nav-about {
-        margin-right: 30px;
+        width: 110px;
+        padding-left: 60px;
     }
 
     .header-right {

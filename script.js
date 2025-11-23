@@ -258,3 +258,32 @@ if (window.innerWidth <= 480) {
         loop: true
     });
 }
+
+
+// Открытие попапа
+document.querySelectorAll('.btn-call').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        document.getElementById('popup-callback').style.display = 'flex';
+    });
+});
+
+// Закрытие по крестику
+document.querySelector('.popup-close').addEventListener('click', () => {
+    document.getElementById('popup-callback').style.display = 'none';
+});
+
+// Закрытие по клику на фон
+document.getElementById('popup-callback').addEventListener('click', e => {
+    if (e.target === e.currentTarget) {
+        e.currentTarget.style.display = 'none';
+    }
+});
+
+// Открыть консультацию
+document.querySelectorAll('.btn-consult').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        document.getElementById('popup-consult').style.display = 'flex';
+    });
+});

@@ -60,7 +60,7 @@
 
 
             <div class="header-right">
-                <a href="#popup:myform" class="btn-call">Заказать звонок</a>
+                <a class="btn-call">Заказать звонок</a>
                 <div class="header-email">sales@mpi-corp.ru</div>
                 <div class="header-phone">8-800-302-35-64</div>
             </div>
@@ -84,7 +84,7 @@
                     для юридических лиц и предприятий.
                 </p>
 
-                <a href="#popup:myform2" class="fs-btn">Получить консультацию</a>
+                <a class="fs-btn btn-consult">Получить консультацию</a>
             </div>
 
             <img src="./img/head.png" class="fs-image" alt="">
@@ -465,7 +465,7 @@
                     <a href="#" class="tg-text">Техподдержка (GIPRO)</a>
                 </div>
 
-                <a href="#popup:myform" class="contact-btn">Связаться с нами</a>
+                <a class="contact-btn btn-call">Связаться с нами</a>
             </div>
 
             <img src="img/about.png" class="support-illustration" alt="">
@@ -524,6 +524,55 @@
     </section>
 
 
+    <!-- POPUP Заказать звонок -->
+    <div class="popup-overlay" id="popup-callback">
+        <div class="popup-window">
+            <button class="popup-close">&times;</button>
+
+            <h2 class="popup-title">Давайте мы вам позвоним</h2>
+            <p class="popup-desc">
+                Оставьте свой номер, и мы перезвоним вам
+            </p>
+
+            <form class="popup-form">
+                <input type="text" class="popup-input" placeholder="Ваше имя">
+
+                <input type="tel" class="popup-input" placeholder="+7 (000) 000-00-00">
+
+                <label class="popup-checkbox">
+                    <input type="checkbox">
+                    <span>Вы даете согласие на обработку персональных данных</span>
+                </label>
+
+                <button type="submit" class="popup-btn">Жду звонка</button>
+            </form>
+
+        </div>
+    </div>
+
+
+    <!-- POPUP Консультация -->
+     
+    <div class="popup-overlay" id="popup-consult">
+        <div class="popup-window">
+            <button class="popup-close">&times;</button>
+
+            <h2 class="popup-title">Получить консультацию</h2>
+            <p class="popup-desc">Оставьте свои контактные данные</p>
+
+            <form class="popup-form">
+                <input type="text" class="popup-input" placeholder="Ваше имя">
+                <input type="tel" class="popup-input" placeholder="+7 (000) 000-00-00">
+
+                <label class="popup-checkbox">
+                    <input type="checkbox">
+                    <span>Вы даете согласие на обработку персональных данных</span>
+                </label>
+
+                <button type="submit" class="popup-btn">Отправить</button>
+            </form>
+        </div>
+    </div>
 
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

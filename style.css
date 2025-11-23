@@ -1,7 +1,14 @@
-/* skffksdk */
 @font-face {
     font-family: "Inter";
-    src: url("./fonts/Inter-Regular.woff") format("woff");
+    src: url("./fonts/Inter-ExtraLight.woff") format("woff");
+    font-weight: 200; 
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./fonts/Inter-Light.woff") format("woff");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -9,16 +16,24 @@
 
 @font-face {
     font-family: "Inter";
-    src: url("./fonts/Inter-Black.woff") format("woff");
-    font-weight: 700;
+    src: url("./fonts/Inter-Regular.woff") format("woff");
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Proxima";
-    src: url("./fonts/ProximaNova-Bold.woff") format("woff");
-    font-weight: 600;
+    font-family: "Inter";
+    src: url("./fonts/Inter-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./fonts/Inter-Bold.woff") format("woff");
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -33,17 +48,24 @@
 
 @font-face {
     font-family: "Proxima";
-    src: url("./fonts/AnyConv.com__proximanova_bold.woff") format("woff");
+    src: url("./fonts/ProximaNova-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
-
 @font-face {
     font-family: "Proxima";
     src: url("./fonts/proximanova_black.woff") format("woff");
-    font-weight: 900;
+    font-weight: 800; 
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/Roboto-Regular.woff") format("woff");
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
@@ -97,6 +119,8 @@ html {
     font-size: 14px;
     line-height: 1.2;
     max-width: 230px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300; /* Light */
 }
 
 
@@ -107,8 +131,10 @@ html {
 
 .header-nav a {
     color: #fff;
-    font-size: 20px;
+    font-size: 18px; 
     text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 300; /* Light */
 }
 
 .header-right {
@@ -128,19 +154,22 @@ html {
     text-align: center;
     color: #fff;
     text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 400; /* Normal */
 }
 
 .header-email,
 .header-phone {
-    font-size: 18px;
+    font-size: 14px; 
     color: #fff;
+    font-family: "Inter", sans-serif;
+    font-weight: 500; /* Medium */
 }
 
 /* ПЕРВЫЙ БЛОК */
 .first-screen {
     background: #142E43;
     padding: 80px 0 60px;
-    /*     height: 540px; */
     height: auto;
 }
 
@@ -160,8 +189,8 @@ html {
     color: #fff;
     margin: 0 0 30px;
     width: 620px;
-    font-family: 'Proxima';
-    font-weight: 700;
+    font-family: 'Proxima', sans-serif;
+    font-weight: 700; /* Bold */
 }
 
 .fs-text {
@@ -169,6 +198,8 @@ html {
     line-height: 24px;
     color: #fff;
     margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300; /* Light */
 }
 
 .fs-btn {
@@ -182,6 +213,8 @@ html {
     color: #fff;
     font-size: 20px;
     text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; /* Normal */
 }
 
 .fs-image {
@@ -1373,7 +1406,6 @@ html {
     }
 
     .help-inner {
-        width: 320px;
         flex-direction: column;
         align-items: center;
         position: relative;
@@ -1389,7 +1421,7 @@ html {
         font-size: 30px;
         line-height: 1.2;
         font-weight: 700;
-        margin: 20px 0 20px;
+/*         margin: 20px 0 20px; */
     }
 
     .help-subtext {
@@ -1399,7 +1431,6 @@ html {
         margin-bottom: 30px;
     }
 
-    /* ФОРМА ВНИЗУ */
     .help-form {
         width: 300px;
         display: flex;

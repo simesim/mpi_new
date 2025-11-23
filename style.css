@@ -626,9 +626,7 @@ html {
     z-index: 0;
 }
 
-/* ПАРТНЕРЫ */
-
-/* Заголовок */
+/* Контейнер */
 .partners-block {
     width: 100%;
 }
@@ -636,6 +634,8 @@ html {
 .partners-inner {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    /* Центрируем весь блок */
 }
 
 /* Заголовок */
@@ -643,14 +643,13 @@ html {
     font-family: 'Proxima', sans-serif;
     font-size: 45px;
     font-weight: 400;
-    /* Normal */
     margin-left: 10px;
     margin-bottom: 35px;
+    align-self: flex-start;
 }
 
 .partners-title b {
     font-weight: 700;
-    /* Bold для тега b */
 }
 
 /* Переключатели */
@@ -664,13 +663,12 @@ html {
     width: 358px;
     height: 44px;
     border-radius: 8px;
-    font-size: 20px;
     border: 2px solid #4D96BF;
     background: none;
     cursor: pointer;
+    font-size: 20px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    /* Normal */
 }
 
 .psw.active {
@@ -681,12 +679,17 @@ html {
 /* Сетка карточек */
 .partners-grid {
     width: 100%;
-    display: grid;
+    display: none;
+    /* По умолчанию скрыты */
     grid-template-columns: repeat(3, 355px);
     grid-auto-rows: 147px;
     gap: 31px;
     justify-content: center;
     margin-bottom: 40px;
+}
+
+.partners-grid.active {
+    display: grid;
 }
 
 .partner-card {
@@ -721,10 +724,14 @@ html {
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    /* Medium */
 }
 
-/* ОБОРУДОВАНИЕы */
+
+
+/******************************************************
+********************* ОБОРУДОВАНИЕ ********************
+******************************************************/
+
 /* Контейнер */
 .equip-block {
     width: 100%;
@@ -738,6 +745,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* Центрируем весь блок */
 }
 
 /* Заголовок */
@@ -745,15 +753,13 @@ html {
     font-family: 'Proxima', sans-serif;
     font-size: 45px;
     font-weight: 400;
-    /* Normal */
     margin-left: 10px;
-    align-self: flex-start;
     margin-bottom: 35px;
+    align-self: flex-start;
 }
 
 .equip-title b {
     font-weight: 700;
-    /* Bold для тега b */
 }
 
 /* Переключатели */
@@ -770,11 +776,10 @@ html {
     border-radius: 8px;
     border: 2px solid #4D96BF;
     background: none;
-    font-size: 20px;
     cursor: pointer;
+    font-size: 20px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    /* Normal */
 }
 
 .eqb.active {
@@ -782,14 +787,19 @@ html {
     color: #fff;
 }
 
-/* Сетка */
-.equip-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 31px;
+/* Группы (скрытие/показ) */
+.equip-group {
+    display: none;
     width: 100%;
     margin-bottom: 40px;
+    justify-content: center;
+    gap: 31px;
+    flex-wrap: wrap;
+}
+
+.equip-group.active {
+    display: flex;
+    /* ИЗНАЧАЛЬНО У ТЕБЯ БЫЛ FLEX */
 }
 
 /* Карточка */
@@ -813,19 +823,20 @@ html {
 
 /* Кнопка */
 .equip-btn {
+    display: block;
     width: 300px;
     height: 50px;
     background: #FF7A3A;
-    border-radius: 8px;
     color: #fff;
+    border-radius: 8px;
     font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    line-height: 50px;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    /* Medium */
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 
@@ -1702,7 +1713,6 @@ html {
 
     .partners-block {
         padding: 40px 0;
-        height: auto;
     }
 
     .partners-title {
@@ -1714,7 +1724,6 @@ html {
 
     .partners-switch {
         width: 309px;
-        display: flex;
         flex-direction: column;
         gap: 20px;
         margin: 0 auto 40px;
@@ -1728,7 +1737,6 @@ html {
     }
 
     .partners-grid {
-        display: grid;
         grid-template-columns: 355px;
         gap: 20px;
         justify-content: center;
@@ -1738,23 +1746,24 @@ html {
         display: none;
     }
 
-    .partners-grid .partner-card:nth-child(1),
-    .partners-grid .partner-card:nth-child(2) {
+    .partners-grid.active .partner-card:nth-child(1),
+    .partners-grid.active .partner-card:nth-child(2) {
         display: flex;
     }
 
-    .partners-grid .partner-card {
+    .partner-card {
         width: 355px;
         height: 147px;
         border-radius: 16px;
-        overflow: hidden;
     }
 
-    .partners-grid .partner-card img {
+    .partner-card img {
         width: 100%;
         height: 100%;
         object-fit: contain;
     }
+
+
 
     /* КНОПКА */
     #partners-btn {

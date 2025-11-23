@@ -114,121 +114,41 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* Партнеры переключатели */
-const MPIpartners = {
-    g1: [
-        "img/p1.png",
-        "img/p2.png",
-        "img/p3.png",
-        "img/p4.png",
-        "img/p5.png",
-        "img/p6.png",
-    ],
-    g2: [
-        "img/p7.png",
-        "img/p8.png",
-        "img/p9.png",
-        "img/p10.png",
-        "img/p11.png",
-        "img/p12.png",
-    ],
-    g3: [
-        "img/p13.png",
-        "img/p14.png",
-        "img/p15.png",
-        "img/p16.png",
-        "img/p17.png",
-        "img/p18.png",
-    ]
-};
+const switches = document.querySelectorAll(".psw");
+const groups = document.querySelectorAll(".partners-grid");
 
-const urlByGroup = {
-    g1: "https://mpi-corp.ru/inzhenernoe_po",
-    g2: "https://mpi-corp.ru/informacionnaya_bezopasnost",
-    g3: "https://mpi-corp.ru/infrastrukturnoe_po"
-};
-
-const grid = document.getElementById("partners-grid");
-const partnersBtn = document.getElementById("partners-btn");
-const switchers = document.querySelectorAll(".psw");
-
-function loadGroup(g) {
-    grid.innerHTML = "";
-
-    MPIpartners[g].forEach(src => {
-        const card = document.createElement("div");
-        card.className = "partner-card";
-
-        const img = document.createElement("img");
-        img.src = src;
-
-        card.appendChild(img);
-        grid.appendChild(card);
-    });
-
-    partnersBtn.href = urlByGroup[g];
-}
-
-switchers.forEach(btn => {
+switches.forEach(btn => {
     btn.addEventListener("click", () => {
-        switchers.forEach(b => b.classList.remove("active"));
+
+        // переключаем кнопки
+        switches.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
 
-        loadGroup(btn.dataset.group);
+        // показываем нужную группу
+        const g = btn.dataset.group;
+
+        groups.forEach(group => {
+            group.classList.toggle("active", group.classList.contains(g));
+        });
     });
 });
 
-loadGroup("g1");
+const eqBtns = document.querySelectorAll(".eqb");
+const eqGroups = document.querySelectorAll(".equip-group");
 
-const equipmentData = {
-    g1: {
-        items: ["o1.png", "o2.png"],
-        url: "https://mpi-corp.ru/klientskie_resheniya"
-    },
-    g2: {
-        items: ["o3.png", "o4.png"],
-        url: "https://mpi-corp.ru/servera_i_setevoe_oborudovanie"
-    },
-    g3: {
-        items: ["o5.png", "o6.png", "o7.png"],
-        url: "https://mpi-corp.ru/promyshlennoe_oborudovanie1"
-    }
-};
-
-const eqButtons = document.querySelectorAll('.eqb');
-const eqGrid = document.getElementById('equip-grid');
-const eqBtn = document.getElementById('equip-btn');
-
-function loadEquip(group) {
-    const data = equipmentData[group];
-
-    if (!data) return;
-
-    eqGrid.innerHTML = "";
-
-    data.items.forEach(img => {
-        const card = document.createElement("div");
-        card.className = "equip-card";
-        card.innerHTML = `<img src="img/${img}" alt="">`;
-        eqGrid.appendChild(card);
-    });
-
-    eqBtn.href = data.url;
-
-    if (window.innerWidth <= 480) {
-        const cards = eqGrid.querySelectorAll(".equip-card");
-        cards.forEach((c, i) => c.style.display = i === 0 ? "flex" : "none");
-    }
-}
-
-eqButtons.forEach(btn => {
+eqBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-        eqButtons.forEach(b => b.classList.remove("active"));
+        eqBtns.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
-        loadEquip(btn.dataset.group);
+
+        const g = btn.dataset.group;
+
+        eqGroups.forEach(group => {
+            group.classList.toggle("active", group.classList.contains(g));
+        });
     });
 });
 
-loadEquip("g1");
 
 
 if (window.innerWidth <= 480) {

@@ -268,16 +268,18 @@ document.querySelectorAll('.btn-call').forEach(btn => {
     });
 });
 
-// Закрытие по крестику
-document.querySelector('.popup-close').addEventListener('click', () => {
-    document.getElementById('popup-callback').style.display = 'none';
+document.querySelectorAll('.popup-close').forEach(close => {
+    close.addEventListener('click', () => {
+        close.closest('.popup-overlay').style.display = 'none';
+    });
 });
 
-// Закрытие по клику на фон
-document.getElementById('popup-callback').addEventListener('click', e => {
-    if (e.target === e.currentTarget) {
-        e.currentTarget.style.display = 'none';
-    }
+document.querySelectorAll('.popup-overlay').forEach(overlay => {
+    overlay.addEventListener('click', e => {
+        if (e.target === overlay) {
+            overlay.style.display = 'none';
+        }
+    });
 });
 
 // Открыть консультацию

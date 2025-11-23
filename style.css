@@ -189,7 +189,8 @@ html {
 }
 
 .dropdown a:hover {
-    background: #f3f5f7;
+    background: none;      
+    color: #4D96BF;      
 }
 
 /* Чтобы не прилипало справа */

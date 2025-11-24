@@ -89,7 +89,7 @@ html {
     width: 1200px;
     margin: 0 auto;
     position: relative;
-     font-family: "Inter", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
 }
 
 /* Хедер */
@@ -483,9 +483,12 @@ button {
     /* Inter Light */
 }
 
-.about-img {
+.about-img_wrap {
     width: 517px;
     height: 466px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: -66px;
     margin-left: 40px;
 }
@@ -567,7 +570,6 @@ button {
 
 .help-title b {
     font-weight: 700;
-    /* Bold для тега b */
 }
 
 .help-subtext {
@@ -639,7 +641,7 @@ button {
     /* Medium */
 }
 
-.help-img {
+.help-img_wrap {
     position: absolute;
     right: -350px;
     top: -60px;

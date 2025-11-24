@@ -209,3 +209,4 @@ document.querySelectorAll('.btn-consult').forEach(btn => {
         document.getElementById('popup-consult').style.display = 'flex';
     });
 });
+

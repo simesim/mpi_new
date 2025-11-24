@@ -15,7 +15,10 @@
         <div class="container header-inner">
 
             <div class="header-left">
-                <img src="./img/logo.png" class="logo-img">
+                <a href="/" class="header-logo__wrap">
+                    <img src="./img/logo.png" alt="MPI Corp" class="logo-img">
+                </a>
+
                 <p class="logo-desc">
                     Программное обеспечение для проектных организаций,<br>
                     промышленных предприятий и продажа оборудования
@@ -23,50 +26,51 @@
             </div>
 
             <nav class="nav">
+                <ul class="main-nav_list">
 
-                <div class="nav-item">
-                    <span>Решения</span>
+                    <li class="nav-item">
+                        <div class="nav_item-core"><span>Решения</span></div>
+                        <div class="dropdown">
+                            <ul class="dropdown_links-list">
+                                <li class="dropdown_list-item"><a
+                                        href="https://mpi-corp.ru/programmnoe_obespechenie">Программное обеспечение</a>
+                                </li>
+                                <li class="dropdown_list-item"><a
+                                        href="https://mpi-corp.ru/oborudovanie">Оборудование</a></li>
+                                <li class="dropdown_list-item"><a href="https://mpi-corp.ru/platforma_nanocad">Учебный
+                                        центр</a></li>
+                            </ul>
+                        </div>
+                    </li>
 
-                    <svg class="nav-arrow" width="12" height="8" viewBox="0 0 12 8">
-                        <path d="M2 2L6 6L10 2" stroke="white" stroke-width="2" stroke-linecap="round" />
-                    </svg>
+                    <li class="nav-item">
+                        <div class="nav_item-core nav-about"><span>О компании</span></div>
+                        <div class="dropdown">
+                            <ul class="dropdown_links-list">
+                                <li class="dropdown_list-item"><a href="https://mpi-corp.ru/akcii">Акции</a></li>
+                                <li class="dropdown_list-item"><a href="https://mpi-corp.ru/novosti">Новости</a></li>
+                                <li class="dropdown_list-item"><a
+                                        href="https://mpi-corp.ru/meropriyatiya">Мероприятия</a></li>
+                                <li class="dropdown_list-item"><a href="https://mpi-corp.ru/articles">Статьи</a></li>
+                                <li class="dropdown_list-item"><a
+                                        href="https://mpi-corp.ru/korporativnaya_zhizn">Корпоративная жизнь</a></li>
+                                <li class="dropdown_list-item"><a href="https://mpi-corp.ru/vakansii">Вакансии</a></li>
+                                <li class="dropdown_list-item"><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </li>
 
-                    <div class="dropdown">
-                        <a href="#">Программное обеспечение</a>
-                        <a href="#">Оборудование</a>
-                        <a href="#">Учебный центр</a>
-                    </div>
-                </div>
-
-                <div class="nav-item">
-                    <span class="nav-about">О компании</span>
-                    <svg class="nav-arrow" width="12" height="8" viewBox="0 0 12 8">
-                        <path d="M2 2L6 6L10 2" stroke="white" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                    <div class="dropdown">
-                        <a href="#">Акции</a>
-                        <a href="#">Новости</a>
-                        <a href="#">Мероприятия</a>
-                        <a href="#">Статьи</a>
-                        <a href="#">Корпоративная жизнь</a>
-                        <a href="#">Вакансии</a>
-                        <a href="#">Контакты</a>
-                    </div>
-                </div>
-
+                </ul>
             </nav>
 
-
             <div class="header-right">
-                <a class="btn-call">Заказать звонок</a>
-                <div class="header-email">sales@mpi-corp.ru</div>
-                <div class="header-phone">8-800-302-35-64</div>
+                <button class="btn-call" type="button">Заказать звонок</button>
+                <a href="mailto:sales@mpi-corp.ru" class="header-email">sales@mpi-corp.ru</a>
+                <a href="tel:88003023564" class="header-phone">8-800-302-35-64</a>
             </div>
 
         </div>
     </header>
-
-
     <section class="first-screen">
         <div class="container first-inner">
 
@@ -82,45 +86,18 @@
                     для юридических лиц и предприятий.
                 </p>
 
-                <a class="fs-btn btn-consult">Получить консультацию</a>
+                <button class="fs-btn btn-consult" type="button">
+                    Получить консультацию
+                </button>
             </div>
 
-            <img src="./img/head.png" class="fs-image" alt="">
-        </div>
-    </section>
-
-    <section class="numbers-block">
-        <div class="container numbers-inner">
-
-            <div class="num-item">
-                <div class="num-title"><b>12 лет</b></div>
-                <div class="num-text">
-                    успешной истории на <br>
-                    рынке программного <br>
-                    обеспечения и ИТ
-                </div>
-            </div>
-
-            <div class="num-item">
-                <div class="num-title"><b>2000 +</b></div>
-                <div class="num-text">
-                    наименований доступных <br>
-                    продуктов к поставке и <br>
-                    внедрению
-                </div>
-            </div>
-
-            <div class="num-item">
-                <div class="num-title"><b>300</b></div>
-                <div class="num-text">
-                    успешно реализованных <br>
-                    проектов на территории <br>
-                    России и СНГ
-                </div>
+            <div class="first-image-wrap">
+                <img src="./img/head.png" class="fs-image" alt="">
             </div>
 
         </div>
     </section>
+
 
 
 

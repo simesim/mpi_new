@@ -707,7 +707,6 @@ button {
 .partners-grid {
     width: 100%;
     display: none;
-    /* По умолчанию скрыты */
     grid-template-columns: repeat(3, 355px);
     grid-auto-rows: 147px;
     gap: 31px;
@@ -725,16 +724,26 @@ button {
     background: #fff;
     border-radius: 15px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-.partner-card img {
-    max-width: 90%;
-    max-height: 70%;
+.partner-img_wrap {
+    width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-img_wrap img {
+    width: 100%;
+    height: auto;
     object-fit: contain;
 }
+
 
 /* Кнопка */
 .partners-btn {
@@ -751,13 +760,8 @@ button {
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
+    border: transparent;
 }
-
-
-
-/******************************************************
-********************* ОБОРУДОВАНИЕ ********************
-******************************************************/
 
 /* Контейнер */
 .equip-block {
@@ -772,7 +776,6 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Центрируем весь блок */
 }
 
 /* Заголовок */

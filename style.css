@@ -1094,9 +1094,12 @@ button {
 .contacts-title {
     font-family: 'Inter', sans-serif;
     font-size: 35px;
-    font-weight: 700;
-    /* Normal */
+    font-weight: 400;
     margin-bottom: 40px;
+}
+
+.contacts-title b {
+    font-weight: 700;
 }
 
 .city-block {
@@ -1106,14 +1109,12 @@ button {
 .city-title {
     font-size: 22px;
     font-weight: 500;
-    /* Medium */
     font-family: 'Inter', sans-serif;
 }
 
 .city-address {
     font-size: 20px;
     font-weight: 300;
-    /* Light */
     margin-top: 4px;
     font-family: 'Inter', sans-serif;
 }
@@ -1122,64 +1123,19 @@ button {
 .contact-phone {
     font-size: 22px;
     font-weight: 500;
-    /* Medium */
     margin-top: 20px;
-    font-family: 'Inter', sans-serif;
-}
-
-/* Правая колонка */
-.contacts-right {
-    width: 45%;
-}
-
-.support-title {
-    font-family: 'Inter', sans-serif;
-    font-size: 35px;
-    font-weight: 700;
-    /* Normal */
-    margin-bottom: 40px;
-}
-
-.support-mail {
-    font-size: 20px;
-    font-weight: 300;
-    /* Light */
     color: #000;
     text-decoration: none;
     display: block;
-    margin-bottom: 25px;
     font-family: 'Inter', sans-serif;
 }
 
-.support-item {
-    display: flex;
-    align-items: center;
-    margin-top: 18px;
-}
-
-.tg-icon {
-    width: 29px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-.tg-text {
-    font-size: 20px;
-    font-weight: 300;
-    /* Light */
-    color: #000;
-    text-decoration: none;
-    font-family: 'Inter', sans-serif;
-}
-
-/* Официальный канал */
+/* Официальные каналы */
 .official-title {
     font-size: 22px;
     font-weight: 500;
-    /* Medium */
     margin-top: 55px;
     margin-bottom: 15px;
-    font-family: 'Inter', sans-serif;
 }
 
 .channels {
@@ -1188,9 +1144,74 @@ button {
     margin-bottom: 35px;
 }
 
-.channel-icon {
+.channel-link {
+    display: block;
+}
+
+.channel-img_wrap {
     width: 33px;
     height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.channel-img_wrap img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Правая колонка */
+.contacts-right {
+    width: 45%;
+}
+
+.support-title {
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.support-title b {
+    font-weight: 700;
+}
+
+.support-mail {
+    font-size: 20px;
+    font-weight: 300;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.support-item {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+    text-decoration: none;
+}
+
+.tg-img_wrap {
+    width: 29px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tg-img_wrap img {
+    width: 100%;
+    height: auto;
+}
+
+.tg-text {
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 10px;
+    color: #000;
+    font-family: 'Inter', sans-serif;
 }
 
 .contact-btn {
@@ -1208,17 +1229,25 @@ button {
     text-decoration: none;
     margin-top: 40px;
     font-family: 'Inter', sans-serif;
+    border: transparent;
 }
 
-.support-illustration {
+.support-illustration_wrap {
     position: absolute;
     right: -100px;
     bottom: -40px;
     width: 517px;
     height: 466px;
-    object-fit: contain;
+    overflow: hidden;
     pointer-events: none;
 }
+
+.support-illustration {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 
 
 .footer-block {
@@ -1242,11 +1271,21 @@ button {
 }
 
 /* Лого */
-.footer-logo {
-    width: 136px;
-    height: 91px;
-    margin-bottom: 20px;
+.footer-logo_wrap {
+    width: 144px;
+    /* как твой логотип */
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
+
+.footer-logo_wrap img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 
 .footer-copy {
     font-size: 16px;
@@ -1381,6 +1420,10 @@ button {
     height: 18px;
 }
 
+.popup-checkbox a {
+    color: #FF7A3A;
+    text-decoration: none;
+}
 
 .popup-btn {
     width: 100%;

@@ -561,16 +561,13 @@ button {
 .help-title {
     font-size: 35px;
     line-height: 1.2;
-    font-weight: 400;
+    font-weight: 700;
     /* Normal */
     margin: 0;
     color: #000;
     font-family: 'Inter', sans-serif;
 }
 
-.help-title b {
-    font-weight: 700;
-}
 
 .help-subtext {
     margin-top: 25px;
@@ -628,6 +625,11 @@ button {
     accent-color: #142E43;
 }
 
+.help-checkbox a {
+    color: #f27437;
+    text-decoration: none;
+}
+
 .help-btn {
     width: 260px;
     height: 60px;
@@ -662,21 +664,15 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Центрируем весь блок */
 }
 
-/* Заголовок */
 .partners-title {
     font-family: 'Proxima', sans-serif;
     font-size: 45px;
-    font-weight: 400;
+    font-weight: 700;
     margin-left: 10px;
     margin-bottom: 35px;
     align-self: flex-start;
-}
-
-.partners-title b {
-    font-weight: 700;
 }
 
 /* Переключатели */
@@ -782,15 +778,12 @@ button {
 .equip-title {
     font-family: 'Proxima', sans-serif;
     font-size: 45px;
-    font-weight: 400;
+    font-weight: 700;
     margin-left: 10px;
     margin-bottom: 35px;
     align-self: flex-start;
 }
 
-.equip-title b {
-    font-weight: 700;
-}
 
 /* Переключатели */
 .equip-switch {
@@ -817,7 +810,6 @@ button {
     color: #fff;
 }
 
-/* Группы (скрытие/показ) */
 .equip-group {
     display: none;
     width: 100%;
@@ -829,27 +821,34 @@ button {
 
 .equip-group.active {
     display: flex;
-    /* ИЗНАЧАЛЬНО У ТЕБЯ БЫЛ FLEX */
 }
 
-/* Карточка */
 .equip-card {
     width: 355px;
     height: 147px;
     border-radius: 15px;
     background: #fff;
     display: flex;
-    align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
     overflow: hidden;
 }
 
-.equip-card img {
-    max-width: 90%;
-    max-height: 70%;
+.equip-img_wrap {
+    width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.equip-img_wrap img {
+    width: 100%;
+    height: auto;
     object-fit: contain;
 }
+
 
 /* Кнопка */
 .equip-btn {
@@ -867,6 +866,7 @@ button {
     font-weight: 500;
     margin: 0 auto;
     margin-top: 20px;
+    border: transparent;
 }
 
 
@@ -881,15 +881,13 @@ button {
 .clients-title {
     font-family: 'Proxima', sans-serif;
     font-size: 45px;
-    font-weight: 400;
+    font-weight: 700;
     /* Normal */
     color: #fff;
     margin-left: 10px;
     margin-bottom: 35px;
 }
 
-
-/* Маркировочная лента */
 .marquee {
     width: 100%;
     height: 226px;
@@ -918,12 +916,13 @@ button {
     object-fit: contain;
 }
 
-.client-card img {
+.client-img_wrap img {
     max-width: 90%;
     max-height: 80%;
     object-fit: contain;
     display: block;
 }
+
 
 /* Анимации */
 .marquee-left .marquee-inner {
@@ -975,19 +974,12 @@ button {
 .eff-title {
     width: 700px;
     font-size: 35px;
-    font-weight: 400;
-    /* Normal */
+    font-weight: 700;
     line-height: 1.2;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
 }
 
-.eff-title b {
-    font-weight: 700;
-    /* Bold для тега b */
-}
-
-/* Форма */
 .eff-form {
     width: 431px;
     display: flex;
@@ -1006,7 +998,6 @@ button {
     margin-bottom: 5px;
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    /* Light */
 }
 
 .form-field input {
@@ -1019,10 +1010,8 @@ button {
     font-size: 16px;
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    /* Light */
 }
 
-/* Чекбокс */
 .checkbox {
     display: flex;
     align-items: center;
@@ -1031,14 +1020,18 @@ button {
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    /* Light */
 }
 
 .checkbox input {
     margin-right: 10px;
 }
 
-/* Кнопка */
+.checkbox a {
+    color: #FF7A3A;
+    text-decoration: none;
+}
+
+
 .eff-btn {
     width: 260px;
     height: 50px;
@@ -1048,28 +1041,33 @@ button {
     color: #FFFFFF;
     font-size: 20px;
     font-weight: 500;
-    /* Medium */
     font-family: 'Inter', sans-serif;
 }
 
-.tri-left {
+.tri-left_wrap,
+.tri-right_wrap {
     position: absolute;
-    left: -420px;
-    top: -30px;
     width: 463px;
     height: 417px;
     filter: blur(4px);
     pointer-events: none;
 }
 
-.tri-right {
-    position: absolute;
+.tri-left_wrap {
+    left: -420px;
+    top: -30px;
+}
+
+.tri-right_wrap {
     right: -420px;
     top: -30px;
-    width: 463px;
-    height: 417px;
-    filter: blur(4px);
-    pointer-events: none;
+}
+
+.tri-left,
+.tri-right {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 
@@ -1096,14 +1094,9 @@ button {
 .contacts-title {
     font-family: 'Inter', sans-serif;
     font-size: 35px;
-    font-weight: 400;
+    font-weight: 700;
     /* Normal */
     margin-bottom: 40px;
-}
-
-.contacts-title b {
-    font-weight: 700;
-    /* Bold для тега b */
 }
 
 .city-block {
@@ -1142,14 +1135,9 @@ button {
 .support-title {
     font-family: 'Inter', sans-serif;
     font-size: 35px;
-    font-weight: 400;
+    font-weight: 700;
     /* Normal */
     margin-bottom: 40px;
-}
-
-.support-title b {
-    font-weight: 700;
-    /* Bold для тега b */
 }
 
 .support-mail {

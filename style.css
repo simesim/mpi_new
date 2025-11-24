@@ -326,7 +326,6 @@ button {
     z-index: 2;
 }
 
-/* 3 колонки */
 .numbers-inner {
     display: flex;
     justify-content: space-between;
@@ -1273,7 +1272,6 @@ button {
 /* Лого */
 .footer-logo_wrap {
     width: 144px;
-    /* как твой логотип */
     height: auto;
     display: flex;
     justify-content: flex-start;
@@ -2112,12 +2110,6 @@ button {
     }
 
     .support-illustration {
-        /*         display: block;
-        width: 200px;
-        height: auto;
-        position: relative;
-        margin: 20px auto 0 auto;
-        transform: rotate(50deg); */
         display: none;
     }
 
@@ -2131,7 +2123,6 @@ button {
     .footer-container {
         width: 100%;
         max-width: 360px;
-        /* как на тильде */
         padding: 0 20px;
         margin: 0 auto;
 

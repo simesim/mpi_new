@@ -1483,9 +1483,34 @@ button {
         font-size: 18px;
     }
 
+    .nav_item-core {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        position: relative;
+    }
+
+    .nav_item-core::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid #fff;
+        position: absolute;
+        right: -14px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .nav_item-core::after {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
     .nav-about {
         white-space: nowrap;
-        padding-left: 40px;
+        padding-left: 80px;
         display: inline-block;
     }
 
